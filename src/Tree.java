@@ -44,13 +44,12 @@ public class Tree {
 	
 	public boolean checkinPath(Node root,int i , int j){
 		
-	//if(root.i==0&&root.j==0)return false;
-	//	System.out.println("checkinpath "+i+""+j+"with"+root.i+""+root.j);
-if(root.parent.i==20)
-	return false;
-    else if(root.i==i&&root.j==j)return true;
-		else checkinPath(root.parent, i, j);
-		return false;
+	
+		//System.out.println("checkinpath "+i+""+j+"with"+root.j+""+root.i);
+		if(root.parent.i==20)return false;
+		else if(root.j==j&&root.i==i)return true;
+		return checkinPath(root.parent, i, j);
+		
 		
 			
 			
